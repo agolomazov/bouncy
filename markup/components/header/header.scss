@@ -16,10 +16,10 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  margin: 0 auto;
-  max-width: 1280px;
-  min-width: 320px;
-  padding: 40px 0;
+  margin: 2.5em auto;
+  max-width: 80em;
+  min-width: 20em;
+  padding: 0 1em;
   width: 100%;
 }
 
@@ -27,7 +27,7 @@
   align-items: stretch;
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 220px;
+  margin-bottom: 14em;
   order: 1;
   width: 100%;
 }
@@ -35,9 +35,9 @@
 .logo {
   font-family: $bigjohnregular;
   font-size: 1.78em;
-  margin-bottom: 40px;
+  margin-bottom: 2.5em;
   order: 1;
-  flex-basis: 300px;
+  flex-basis: auto;
   flex-grow: 1;
   flex-shrink: 2;
 }
@@ -74,18 +74,17 @@
 .menu__item {
   align-items: stretch;
   display: flex;
-  margin: 0 5px 10px;
+  margin: 0 .3125em 0.625em;
   justify-content: center;
 }
 
 .menu__item-link {
-  border: 2px solid transparent;
-  border-radius: 20px;
+  border-color: transparent;
   color: $white-color;
   display: block;
   height: auto;
   text-decoration: none;
-  padding: 5px 15px;
+  padding: .3125em .9375em;
   width: 100%;
 
   &:hover {
@@ -111,14 +110,14 @@
   color: $white-color;
   order: 2;
   letter-spacing: .12em;
-  margin-bottom: 100px;
+  margin-bottom: 6.25em;
 }
 
 .slogan__title {
   font-family: $sourceSansProLight;
   font-size: 2.2em;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 3.75em;
 }
 
 .header__bottom-btn {
@@ -126,7 +125,7 @@
   align-self: flex-end;
   display: flex;
   justify-content: center;
-  margin-bottom: 60px;
+  margin-bottom: 3.75em;
   order: 3;
   width: 100%;
 }
@@ -145,7 +144,7 @@
   -o-animation-play-state: running;
   animation-play-state: running;
 
-  &:hover{
+  &:hover {
     -webkit-animation-play-state: paused;
     -moz-animation-play-state: paused;
     -o-animation-play-state: paused;
@@ -168,5 +167,31 @@
   }
   100% {
     top: 0;
+  }
+}
+
+@media all and (max-width: 61.875em) {
+  .navigation {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-bottom: 1.5em;
+    text-align: center;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+
+  .slogan__description {
+    margin: 0 auto;
+    width: 75%;
+  }
+}
+
+@media all and (max-width: 45em){
+  .navigation{
+    margin-bottom: 4em;
   }
 }
