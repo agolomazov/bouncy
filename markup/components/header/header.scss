@@ -4,8 +4,9 @@
   background-size: cover;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: flex-start;
   height: auto;
+  justify-content: flex-start;
+  order: 1;
   position: relative;
   width: 100%;
 }

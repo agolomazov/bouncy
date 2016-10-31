@@ -42,7 +42,9 @@ strong.green {
 }
 
 .page__buffer {
+  display: flex;
   height: 50px;
+  order: 999;
 }
 
 .text-center {
@@ -57,6 +59,15 @@ strong.green {
   text-align: right;
 }
 
+.title__text{
+  font-family: $sourceSansProLight;
+  font-size: 1.25em;
+  letter-spacing: .12em;
+  margin-top: 0;
+  margin-bottom: 2em;
+  text-transform: uppercase;
+}
+
 .clearfix {
   zoom: 1;
 }
@@ -69,6 +80,7 @@ strong.green {
 
 .title {
   color: $dark-title-color;
+  font-weight: normal;
 }
 
 .clearfix:after {

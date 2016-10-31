@@ -1,1 +1,130 @@
+.about {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  order: 1;
+  width: 100%;
+}
 
+.about-wrapper {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin: 4.5em auto;
+  max-width: 80em;
+  min-width: 20em;
+  padding: 0 1em;
+}
+
+.about__title {
+  font-size: 1em;
+  margin-bottom: 1.75em;
+  order: 1;
+}
+
+.subtitle__text {
+  color: $text-block-gray-color;
+  font-size: .875em;
+  margin: 0 0 1.42em;
+  padding: 0;
+}
+
+.list-icons {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3.75em;
+  order: 2;
+}
+
+.list-colored-icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.list-colored-icons__item {
+  align-items: center;
+  background-color: $icon-bg-color;
+  border-radius: 50%;
+  display: flex;
+  flex-grow: 1;
+  height: 2.5em;
+  justify-content: center;
+  margin: .625em;
+  padding: .625em;
+  width: 2.5em;
+
+  -webkit-transition: all .5s;
+  transition: all .5s;
+
+  &:hover {
+    background-color: $icon-bg-hover-color;
+  }
+}
+
+.list-colored-icons__link {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.ideas {
+  font-size: 1em;
+  margin-bottom: 1.75em;
+  order: 3;
+}
+
+.ideas-description-title {
+  font-size: 1.25em;
+  margin: 0 0 1.5em;
+}
+
+.ideas-content {
+  align-content: flex-start;
+  align-items: baseline;
+  display: flex;
+  color: $text-block-gray-color;
+  flex-wrap: wrap;
+  font-size: 1em;
+  justify-content: space-between;
+  margin: 0 1.5em 1.5em 0;
+  width: 100%;
+}
+
+.ideas-content__item{
+  margin-bottom: .75em;
+  width: 48%;
+}
+
+.ideas-content__text{
+  margin: 0 0 .75em;
+  padding: 0;
+}
+
+@media all and (max-width: 720px){
+  .about-wrapper{
+    margin: 2em auto;
+  }
+
+  .ideas{
+    margin-bottom: 1em;
+  }
+
+  .ideas-content__item{
+    margin-bottom: .75em;
+    width: 100%;
+  }
+}
