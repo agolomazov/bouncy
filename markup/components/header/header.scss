@@ -1,14 +1,6 @@
 .header {
-  align-items: stretch;
   background: url(%=static=%assets/header/header-bg.jpg) no-repeat;
   background-size: cover;
-  display: flex;
-  flex-wrap: nowrap;
-  height: auto;
-  justify-content: flex-start;
-  order: 1;
-  position: relative;
-  width: 100%;
 }
 
 .header-wrapper {

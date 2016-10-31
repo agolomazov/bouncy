@@ -87,6 +87,17 @@ strong.green {
   clear: both;
 }
 
+.section{
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  order: 1;
+  position: relative;
+  width: 100%;
+}
+
 .pull-left {
   float: left;
 }
