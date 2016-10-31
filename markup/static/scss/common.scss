@@ -25,11 +25,13 @@ strong.green {
 .page__wrapper {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: stretch;
   min-height: 100%;
   margin-bottom: -50px;
+  width: 100%;
+  overflow: hidden;
 }
 
 *::selection {
@@ -88,9 +90,10 @@ strong.green {
 }
 
 .section{
-  align-items: stretch;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   height: auto;
   justify-content: flex-start;
   order: 1;

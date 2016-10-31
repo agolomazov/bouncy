@@ -12,7 +12,6 @@
   margin: 2.5em auto;
   max-width: 80em;
   min-width: 20em;
-  padding: 0 1em;
   width: 100%;
 }
 
@@ -26,13 +25,14 @@
 }
 
 .logo {
-  font-family: $bigjohnregular;
-  font-size: 1.78em;
-  margin-bottom: 2.5em;
-  order: 1;
   flex-basis: auto;
   flex-grow: 1;
   flex-shrink: 2;
+  font-family: $bigjohnregular;
+  font-size: 1.78em;
+  margin-bottom: 2.5em;
+  margin-left: 1em;
+  order: 1;
 }
 
 .logo-link {
@@ -48,9 +48,10 @@
 }
 
 .nav-menu {
-  order: 2;
   flex-grow: 4;
   flex-shrink: 4;
+  margin-right: 1em;
+  order: 2;
 }
 
 .menu {
@@ -171,7 +172,12 @@
 
   .logo {
     margin-bottom: 1.5em;
+    margin-left: 0;
     text-align: center;
+  }
+
+  .nav-menu{
+    margin-right: 0;
   }
 
   .menu {
@@ -187,5 +193,9 @@
 @media all and (max-width: 45em){
   .navigation{
     margin-bottom: 4em;
+  }
+
+  .nav-menu{
+    margin: 0 2em;
   }
 }
