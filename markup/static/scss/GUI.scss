@@ -1,2 +1,9 @@
 // GUI stylies of the project
 // For example, styles of the links, buttons and so on.
+
+.btn{
+  border-width: 2px;
+  border-style: solid;
+  border-color: $white-color;
+  border-radius: 20px;
+}

@@ -19,7 +19,7 @@
   margin: 0 auto;
   max-width: 1280px;
   min-width: 320px;
-  padding: 40px 0;
+  padding: 40px 15px;
   width: 100%;
 }
 
@@ -79,8 +79,7 @@
 }
 
 .menu__item-link {
-  border: 2px solid transparent;
-  border-radius: 20px;
+  border-color: transparent;
   color: $white-color;
   display: block;
   height: auto;
@@ -169,4 +168,8 @@
   100% {
     top: 0;
   }
+}
+
+@media all and (max-width: 990px){
+    
 }
