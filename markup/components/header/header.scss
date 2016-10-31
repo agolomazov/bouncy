@@ -11,6 +11,11 @@
 }
 
 .header-wrapper {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   margin: 0 auto;
   max-width: 1280px;
   min-width: 320px;
@@ -18,19 +23,23 @@
   width: 100%;
 }
 
-.navigation{
-  display: block;
+.navigation {
+  align-items: stretch;
+  display: flex;
+  justify-content: flex-start;
   margin-bottom: 220px;
+  order: 1;
   width: 100%;
 }
 
 .logo {
-  display: block;
-  margin-bottom: 40px;
   font-family: $bigjohnregular;
   font-size: 1.78em;
-  height: 100%;
-  width: 300px;
+  margin-bottom: 40px;
+  order: 1;
+  flex-basis: 300px;
+  flex-grow: 1;
+  flex-shrink: 2;
 }
 
 .logo-link {
@@ -42,5 +51,122 @@
 
   &:hover {
     color: darken($white-color, 20%);
+  }
+}
+
+.nav-menu {
+  order: 2;
+  flex-grow: 4;
+  flex-shrink: 4;
+}
+
+.menu {
+  align-items: stretch;
+  display: flex;
+  font-size: 1em;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__item {
+  align-items: stretch;
+  display: flex;
+  margin: 0 5px 10px;
+  justify-content: center;
+}
+
+.menu__item-link {
+  border: 2px solid transparent;
+  border-radius: 20px;
+  color: $white-color;
+  display: block;
+  height: auto;
+  text-decoration: none;
+  padding: 5px 15px;
+  width: 100%;
+
+  &:hover {
+    border-color: darken($white-color, 20%);
+    color: darken($white-color, 20%);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+
+  &.active {
+    border-color: $white-color;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+
+    &:hover {
+      color: darken($white-color, 20%);
+      border-color: darken($white-color, 20%);
+    }
+  }
+}
+
+.slogan {
+  color: $white-color;
+  order: 2;
+  letter-spacing: .12em;
+  margin-bottom: 100px;
+}
+
+.slogan__title {
+  font-family: $sourceSansProLight;
+  font-size: 2.2em;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.header__bottom-btn {
+  align-items: center;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  order: 3;
+  width: 100%;
+}
+
+.to-about-us-link {
+  background: url(%=static=%assets/header/green-arrow.png) no-repeat;
+  height: 36px;
+  width: 36px;
+  position: relative;
+  -webkit-animation: btnToAbout 2s infinite;
+  -moz-animation: btnToAbout 2s infinite;
+  -o-animation: btnToAbout 2s infinite;
+  animation: btnToAbout 2s infinite;
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
+
+  &:hover{
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+}
+
+@keyframes btnToAbout {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: 40px;
+  }
+  50% {
+    top: -20px;
+  }
+  75% {
+    top: 30px;
+  }
+  100% {
+    top: 0;
   }
 }
