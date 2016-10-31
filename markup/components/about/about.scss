@@ -1,25 +1,3 @@
-.about {
-
-}
-
-.about-wrapper {
-  align-items: stretch;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  margin: 4.5em auto;
-  max-width: 80em;
-  min-width: 20em;
-  padding: 0 1em;
-}
-
-.about__title {
-  font-size: 1em;
-  margin-bottom: 1.75em;
-  order: 1;
-}
-
 .subtitle__text {
   color: $text-block-gray-color;
   font-size: .875em;

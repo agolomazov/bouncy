@@ -3,18 +3,6 @@
   background-size: cover;
 }
 
-.header-wrapper {
-  align-items: stretch;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  margin: 2.5em auto;
-  max-width: 80em;
-  min-width: 20em;
-  width: 100%;
-}
-
 .navigation {
   align-items: stretch;
   display: flex;
@@ -30,8 +18,7 @@
   flex-shrink: 2;
   font-family: $bigjohnregular;
   font-size: 1.78em;
-  margin-bottom: 2.5em;
-  margin-left: 1em;
+  margin-bottom: 1em;
   order: 1;
 }
 
@@ -172,7 +159,6 @@
 
   .logo {
     margin-bottom: 1.5em;
-    margin-left: 0;
     text-align: center;
   }
 
@@ -193,9 +179,5 @@
 @media all and (max-width: 45em){
   .navigation{
     margin-bottom: 4em;
-  }
-
-  .nav-menu{
-    margin: 0 2em;
   }
 }
