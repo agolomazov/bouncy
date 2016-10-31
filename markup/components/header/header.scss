@@ -1,6 +1,13 @@
 .header {
+  align-items: stretch;
   background: url(%=static=%assets/header/header-bg.jpg) no-repeat;
   background-size: cover;
+  display: flex;
+  flex-wrap: nowrap;
+  // justify-content: flex-start;
+  height: auto;
+  position: relative;
+  width: 100%;
 }
 
 .navigation {
@@ -13,13 +20,13 @@
 }
 
 .logo {
-  flex-basis: auto;
-  flex-grow: 1;
-  flex-shrink: 2;
   font-family: $bigjohnregular;
   font-size: 1.78em;
   margin-bottom: 1em;
   order: 1;
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 2;
 }
 
 .logo-link {
@@ -35,10 +42,9 @@
 }
 
 .nav-menu {
+  order: 2;
   flex-grow: 4;
   flex-shrink: 4;
-  margin-right: 1em;
-  order: 2;
 }
 
 .menu {
@@ -98,8 +104,7 @@
   font-family: $sourceSansProLight;
   font-size: 2.2em;
   text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 1.704em;
+  margin-bottom: 3.75em;
 }
 
 .header__bottom-btn {
@@ -160,10 +165,6 @@
   .logo {
     margin-bottom: 1.5em;
     text-align: center;
-  }
-
-  .nav-menu{
-    margin-right: 0;
   }
 
   .menu {
