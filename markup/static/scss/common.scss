@@ -4,11 +4,22 @@ html, body {
     height: 100%;
 }
 
+
+body{
+    font-family: $opensans;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 .page {
     
 }
 
 .page__wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
     min-height: 100%;
     margin-bottom: -50px;
 }
@@ -35,6 +46,10 @@ html, body {
 }
 .clearfix:after {
     clear: both;
+}
+
+.pull-left{
+    float: left;
 }
 
 /*
