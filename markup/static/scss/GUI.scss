@@ -4,9 +4,20 @@
 .btn{
   border-width: 2px;
   border-style: solid;
-  border-color: $white-color;
+  border-color: $dark-gray-text-color;
   border-radius: 20px;
+  color: $dark-gray-text-color;
+  text-decoration: none;
+  padding: .3125em .9375em;
+  -webkit-transition: border-color .5s ease;
+  transition: border-color .5s ease;
+
+  &:hover {
+    border-color: $green-bg-block;
+    color: $green-bg-block;
+  }
 }
+
 
 /*
     Спрайты
