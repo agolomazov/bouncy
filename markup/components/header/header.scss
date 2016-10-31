@@ -1,13 +1,6 @@
 .header {
-  align-items: stretch;
   background: url(%=static=%assets/header/header-bg.jpg) no-repeat;
   background-size: cover;
-  display: flex;
-  flex-wrap: nowrap;
-  // justify-content: flex-start;
-  height: auto;
-  position: relative;
-  width: 100%;
 }
 
 .navigation {
