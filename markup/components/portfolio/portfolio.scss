@@ -22,19 +22,25 @@
   cursor: pointer;
   margin: 0 .625em;
   padding-bottom: .3125em;
-  -webkit-transition: all .25s;
-  transition: all .25s;
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
 
   &:hover {
     border-bottom-color: $bold-text-green-color;
+    -webkit-transition: all .25s ease-in;
+    transition: all .25s ease-in;
   }
 }
 
 .portfolio-control.active-control {
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
   border-bottom-color: $bold-text-green-color;
 
   &:hover {
     border-bottom-color: darken($bold-text-green-color, 15%);
+    -webkit-transition: all .25s ease-in;
+    transition: all .25s ease-in;
   }
 }
 
@@ -71,11 +77,13 @@
   margin: auto;
   width: 100%;
   position: absolute;
-  -webkit-transition: all .25s;
-  transition: all .25s;
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
   
   &:hover{
     background-color: $black-color-alpha;
+    -webkit-transition: all .25s ease-in;
+    transition: all .25s ease-in;
   }
 }
 
@@ -94,20 +102,22 @@
 }
 
 .portfolio-item:nth-child(odd) .portfolio-item__title{
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all .5s cubic-bezier(.54,1,.76,.04);
+  transition: all .5s ease-out;
   transform: translateY(-500em);
 }
 
 .portfolio-item:nth-child(even) .portfolio-item__title{
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all .5s cubic-bezier(.54,1,.76,.04);
+  transition: all .5s ease-out;
   transform: translateY(500em);
 }
 
 .portfolio-item:nth-child(odd):hover .portfolio-item__title,
 .portfolio-item:nth-child(even):hover .portfolio-item__title{
   transform: translateY(0);
+  -webkit-transition: all .5s cubic-bezier(.54,1,.76,.04);
+  transition: all .5s cubic-bezier(.54,1,.76,.04);
 }
 
 .portfolio-item__title:after {
@@ -124,20 +134,22 @@
 }
 
 .portfolio-item:nth-child(even) .portfolio-item__review {
-  -webkit-transition: all .75s;
-  transition: all .75s;
+  -webkit-transition: all .75s ease-out;
+  transition: all .75s ease-out;
   transform: translateX(500em);
 }
 
 .portfolio-item:nth-child(odd) .portfolio-item__review {
-  -webkit-transition: all .75s;
-  transition: all .75s;
+  -webkit-transition: all .75s ease-out;
+  transition: all .75s ease-out;
   transform: translateX(-500em);
 }
 
 .portfolio-item:nth-child(odd):hover .portfolio-item__review,
 .portfolio-item:nth-child(even):hover .portfolio-item__review{
   transform: translateX(0);
+  -webkit-transition: all .75s ease-in;
+  transition: all .75s ease-in;
 }
 
 .portfolio-item__links {
@@ -164,26 +176,26 @@
 
 .portfolio-item:nth-child(odd) .portfolio-item__links-item:first-child{
   transform: translateX(500em);
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
 }
 
 .portfolio-item:nth-child(even) .portfolio-item__links-item:first-child{
   transform: translateX(-500em);
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
 }
 
 .portfolio-item:nth-child(even) .portfolio-item__links-item:last-child{
   transform: translateX(-500em);
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  --webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
 }
 
 .portfolio-item:nth-child(odd) .portfolio-item__links-item:last-child{
   transform: translateX(-500em);
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
 }
 
 .portfolio-item:nth-child(odd):hover .portfolio-item__links-item:first-child,
@@ -191,6 +203,8 @@
 .portfolio-item:nth-child(even):hover .portfolio-item__links-item:last-child,
 .portfolio-item:nth-child(odd):hover .portfolio-item__links-item:last-child{
   transform: translateX(0);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
 }
 
 .portfolio-item__link {
