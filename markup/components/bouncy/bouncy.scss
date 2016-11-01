@@ -21,8 +21,8 @@
     text-transform: uppercase;
 }
 .bouncy-article__body {
-    max-width: 460px;
-    margin-bottom: 35px;
+    max-width: 80%;
+    margin-bottom: 2em;
 }
 .bouncy-picture {
     display: flex;
@@ -38,14 +38,18 @@
 @media (max-width: 600px) {
     .bouncy-article {
         flex-grow: 1;
-        margin-bottom: 35px;
+        margin: 0 1em 2em;
+    }
+    .bouncy-article__body {
+        max-width: 100%;
     }
     .bouncy-wrapper {
         flex-direction: column;
         
     }
     .bouncy-picture {
-        flex-direction: row;
-        justify-content: center; 
+        display: none;
+        // flex-direction: row;
+        // justify-content: center; 
     }
 }
