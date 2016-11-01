@@ -6,10 +6,11 @@
 }
 .bouncy-wrapper {
   display: flex;
+  flex-direction: row;
   margin: 0 auto;
-  max-width: 830px;
-  min-width: 320px;
-  padding: 80px 10px;
+  max-width: 52em;
+  min-width: 20em;
+  padding: 5em .625em;
   width: 100%;
 }
 .bouncy-article {
