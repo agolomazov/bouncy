@@ -1,0 +1,94 @@
+.impressed {
+  background: url(%=static=%assets/impressed/black-man-bg.jpg) no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.impressed .wrapper {
+  padding: 2em 2em 2em 1.75em;
+}
+
+.impressed .title__text {
+  width: 50%;
+}
+
+.impressed__content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.impressed__block {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 50%;
+}
+
+.cite_text {
+  margin-bottom: 1em;
+  padding: 0;
+}
+
+.impressed__blockquote-signature {
+  text-transform: uppercase;
+}
+
+.author-cite {
+  font-weight: bold;
+}
+
+.author-cite:before {
+  content: '- ';
+}
+
+.img-wrapper {
+  background: url(%=static=%assets/impressed/imac.png) no-repeat;
+  display: flex;
+  height: 328px;
+  overflow: hidden;
+  position: absolute;
+  top: -11em;
+  text-align: center;
+  width: 409px;
+}
+
+.impressed-img-block {
+  align-items: flex-end;
+}
+
+.impressed-img-block__logo {
+  font-family: $bigjohnregular;
+  font-size: 1.875em;
+  margin: auto;
+  transform: translateY(-1em);
+  width: 100%;
+}
+
+.impressed-img-block__link {
+  color: $white-color;
+  text-decoration: none;
+}
+
+@media all and (max-width: 57.5em) {
+
+  .impressed .wrapper {
+    padding: 0 2em 0 1.75em;
+  }
+
+  .impressed .title__text {
+    text-align: center;
+    width: 100%;
+  }
+
+  .impressed__block {
+    margin: 0 auto 2em;
+    width: 100%;
+  }
+
+  .impressed-img-block {
+    display: none;
+  }
+}
