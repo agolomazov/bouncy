@@ -1,16 +1,24 @@
+.features{
+  padding: 2em 0;
+}
+
 .features__portfolio {
   align-items: center;
   display: flex;
   flex-direction: row;
+  flex-shrink: 4;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 3.75em;
+  max-width: 80em;
+  min-width: 20em;
   order: 2;
 }
 
 .features__portfolio-list {
   display: flex;
   flex-direction: row;
+  flex-shrink: 4;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
@@ -19,6 +27,7 @@
 }
 
 .features__portfolio-item {
+  flex-shrink: 4;
   margin: 0;
   padding: 0;
 }
@@ -107,3 +116,16 @@
   width: 5.625em;
 }
 
+@media all and (max-width: 80em){
+  .features__portfolio-img{
+    width: 100%;
+  }
+
+  .portfolio-size-1 {
+    width: 50%;
+  }
+
+  .portfolio-size-2{
+    width: 100%;
+  }
+}
