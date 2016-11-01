@@ -34,9 +34,17 @@
     width: 200px;
 }
 
+@media (max-width: 52em){
+    .bouncy-wrapper__article {
+        margin-left: 1em;
+    }
+    .bouncy-picture {
+        margin-right: 1em;
+    }
+}
 
 
-@media (max-width: 600px) {
+@media (max-width: 38em) {
     .bouncy-article {
         flex-grow: 1;
         margin: 0 1em 2em;
