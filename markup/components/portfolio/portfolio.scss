@@ -1,0 +1,203 @@
+.portfolio {
+  padding: 2em 0;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+}
+
+.portfolio-controls {
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.portfolio-control {
+  border-bottom: .2em solid transparent;
+  color: $dark-title-name-color;
+  cursor: pointer;
+  margin: 0 .625em;
+  padding-bottom: .3125em;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+
+  &:hover {
+    border-bottom-color: $bold-text-green-color;
+  }
+}
+
+.portfolio-control.active-control {
+  border-bottom-color: $bold-text-green-color;
+
+  &:hover {
+    border-bottom-color: darken($bold-text-green-color, 15%);
+  }
+}
+
+.portfolio-items {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.portfolio-item {
+  margin-bottom: .625em;
+}
+
+.portfolio-item__meta {
+  display: none;
+}
+
+.portfolio-item__wrapper {
+  align-items: stretch;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+}
+
+.mix {
+  display: none;
+}
+
+.portfolio-item__meta {
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  height: 100%;
+  margin: auto;
+  width: 100%;
+  position: absolute;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  
+  &:hover{
+    background-color: $black-color-alpha;
+  }
+}
+
+.portfolio-item__meta-inner {
+  padding: 10%;
+  margin: auto;
+}
+
+.portfolio-item__title {
+  color: $bold-text-green-color;
+  font-size: 1.25em;
+  letter-spacing: .12em;
+  margin: 0 0 1em 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.portfolio-item:nth-child(odd) .portfolio-item__title{
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  transform: translateY(-500em);
+}
+
+.portfolio-item:nth-child(even) .portfolio-item__title{
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  transform: translateY(500em);
+}
+
+.portfolio-item:nth-child(odd):hover .portfolio-item__title,
+.portfolio-item:nth-child(even):hover .portfolio-item__title{
+  transform: translateY(0);
+}
+
+.portfolio-item__title:after {
+  background-color: $bold-text-green-color;
+  content: '';
+  display: block;
+  height: .1em;
+  width: 5em;
+}
+
+.portfolio-item__review {
+  color: $dark-gray-text-color;
+  font-size: .75em;
+}
+
+.portfolio-item:nth-child(even) .portfolio-item__review {
+  -webkit-transition: all .75s;
+  transition: all .75s;
+  transform: translateX(500em);
+}
+
+.portfolio-item:nth-child(odd) .portfolio-item__review {
+  -webkit-transition: all .75s;
+  transition: all .75s;
+  transform: translateX(-500em);
+}
+
+.portfolio-item:nth-child(odd):hover .portfolio-item__review,
+.portfolio-item:nth-child(even):hover .portfolio-item__review{
+  transform: translateX(0);
+}
+
+.portfolio-item__links {
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0 0 1em;
+  padding: 0;
+}
+
+.portfolio-item__links-item {
+  align-items: center;
+  background: $black-color;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 2em;
+  margin-right: .5em;
+  width: 2em;
+}
+
+.portfolio-item:nth-child(odd) .portfolio-item__links-item:first-child{
+  transform: translateX(500em);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.portfolio-item:nth-child(even) .portfolio-item__links-item:first-child{
+  transform: translateX(-500em);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.portfolio-item:nth-child(even) .portfolio-item__links-item:last-child{
+  transform: translateX(-500em);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.portfolio-item:nth-child(odd) .portfolio-item__links-item:last-child{
+  transform: translateX(-500em);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.portfolio-item:nth-child(odd):hover .portfolio-item__links-item:first-child,
+.portfolio-item:nth-child(even):hover .portfolio-item__links-item:first-child,
+.portfolio-item:nth-child(even):hover .portfolio-item__links-item:last-child,
+.portfolio-item:nth-child(odd):hover .portfolio-item__links-item:last-child{
+  transform: translateX(0);
+}
+
+.portfolio-item__link {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
