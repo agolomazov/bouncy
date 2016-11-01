@@ -1,3 +1,56 @@
-.portfolio{
+.portfolio {
   padding: 2em 0;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+}
+
+.portfolio-controls {
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.portfolio-control {
+  border-bottom: .2em solid transparent;
+  color: $dark-title-name-color;
+  cursor: pointer;
+  margin: 0 .625em;
+  padding-bottom: .3125em;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+
+  &:hover {
+    border-bottom-color: $bold-text-green-color;
+  }
+}
+
+.portfolio-control.active-control{
+  border-bottom-color: $bold-text-green-color;
+
+  &:hover{
+    border-bottom-color: darken($bold-text-green-color, 10%);
+  }
+}
+
+.portfolio-items {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.portfolio-item {
+  margin-bottom: .625em;
+}
+
+.portfolio-item__meta {
+  display: none;
+}
+
+.mix{
+  display: none;
 }
