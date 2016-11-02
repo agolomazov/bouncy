@@ -10,21 +10,36 @@
   margin-bottom: 2.5em;
 }
 
-.latest-posts__list {
-  align-items: flex-start;
+.latest-post__container{
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  order: 1;
+  width: 85%;
+}
+
+.latest-posts__list {
+  align-items: center;
+  display: flex;
   list-style: none;
   margin: 0 auto 2em;
-  order: 1;
   padding: 0;
   width: 90%;
 }
 
 .latest-post__item{
   margin-bottom: 2em;
-   width: 70%;
+  margin-right: 2em;
+   width: 95%;
+}
+
+.latest-post__item:hover{
+  cursor: pointer;
+}
+
+.latest-post__item:focus{
+  outline: none;
 }
 
 .latest-posts .subtitle__text {
@@ -83,4 +98,27 @@
 .latest-posts__read-more-link .latest-post__link:hover,
 .latest-posts__read-more-link .latest-post__link:hover:before{
   color: darken($dark-gray-text-color, 20%);
+}
+
+.latest-posts__dots{
+  list-style: none;
+}
+
+.latest-posts__dots button {
+  opacity: 0;
+}
+
+.latest-posts__dots li {
+  background: url(%=static=%minified-svg/dots-slider.svg) no-repeat;
+  background-position: 10px -10px;
+}
+
+.latest-posts__dots li.slick-active{
+  background-position: 10px 11px;
+}
+
+@media all and (max-width: 38.5em){
+  .latest-posts__list {
+    flex-direction: column;
+  }
 }
