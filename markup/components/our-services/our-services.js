@@ -1,15 +1,35 @@
 var servicesTabs = (() => {
-    let container;
-
-    let init = (selector) => {
-        console.log('init of servicesTabs'); // TODO: remove on prod
-        container = document.getElementById(selector);
-        console.log(container);
+    const params = {
+        container: '',
+        tabClass: ''
     };
+
+    let hideAll = (selector) => {
+        $(selector).hide();
+    };
+
+    let switchTab = (selector) => {
+        hideAll(params.tabClass);
+        $('#' + selector).show();
+    };
+
+    let init = (selector, options) => {
+        params.container = $(selector);
+        params.tabClass = options.tabClass;
+        params.activeClass = options.activeClass;
+        $('.our-services__tabs-link').on('click', function (event) {
+            event.preventDefault();
+            switchTab($(this).data('target'));
+        });
+    };
+
+
+
+
 
     return {
         init
     };
 })();
 
-servicesTabs.init('.our-services__tabs');
+servicesTabs.init('services-tabs', {tabClass: '.our-services__service', activeClass: 'service-active'});

@@ -36,13 +36,20 @@
         border-color: $icon-bg-hover-color;
     }
 }
+.our-services__tabs-content {
+    display: flex;
+    // flex-wrap: wrap;
+}
 .our-services__service {
-    display: none;
+    // visibility: hidden;
+    transition: visibility 0s, opacity 0.5s linear;
+    // display: flex;
 }
 .our-services__service-title {
     margin-top: 0;
 }
 
 .service-active {
-    display: block;
+    background-color: $icon-bg-hover-color;
+    border-color: $icon-bg-hover-color;
 }
