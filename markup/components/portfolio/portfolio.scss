@@ -5,6 +5,7 @@
 .portfolio-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1.5em;
   order: 1;
 }
 
@@ -79,8 +80,8 @@
   position: absolute;
   -webkit-transition: all .25s ease-out;
   transition: all .25s ease-out;
-  
-  &:hover{
+
+  &:hover {
     background-color: $black-color-alpha;
     -webkit-transition: all .25s ease-in;
     transition: all .25s ease-in;
@@ -101,23 +102,23 @@
   text-transform: uppercase;
 }
 
-.portfolio-item:nth-child(odd) .portfolio-item__title{
-  -webkit-transition: all .5s cubic-bezier(.54,1,.76,.04);
+.portfolio-item:nth-child(odd) .portfolio-item__title {
+  -webkit-transition: all .5s cubic-bezier(.54, 1, .76, .04);
   transition: all .5s ease-out;
   transform: translateY(-500em);
 }
 
-.portfolio-item:nth-child(even) .portfolio-item__title{
-  -webkit-transition: all .5s cubic-bezier(.54,1,.76,.04);
+.portfolio-item:nth-child(even) .portfolio-item__title {
+  -webkit-transition: all .5s cubic-bezier(.54, 1, .76, .04);
   transition: all .5s ease-out;
   transform: translateY(500em);
 }
 
 .portfolio-item:nth-child(odd):hover .portfolio-item__title,
-.portfolio-item:nth-child(even):hover .portfolio-item__title{
+.portfolio-item:nth-child(even):hover .portfolio-item__title {
   transform: translateY(0);
-  -webkit-transition: all .5s cubic-bezier(.54,1,.76,.04);
-  transition: all .5s cubic-bezier(.54,1,.76,.04);
+  -webkit-transition: all .5s cubic-bezier(.54, 1, .76, .04);
+  transition: all .5s cubic-bezier(.54, 1, .76, .04);
 }
 
 .portfolio-item__title:after {
@@ -146,7 +147,7 @@
 }
 
 .portfolio-item:nth-child(odd):hover .portfolio-item__review,
-.portfolio-item:nth-child(even):hover .portfolio-item__review{
+.portfolio-item:nth-child(even):hover .portfolio-item__review {
   transform: translateX(0);
   -webkit-transition: all .75s ease-in;
   transition: all .75s ease-in;
@@ -174,25 +175,25 @@
   width: 2em;
 }
 
-.portfolio-item:nth-child(odd) .portfolio-item__links-item:first-child{
+.portfolio-item:nth-child(odd) .portfolio-item__links-item:first-child {
   transform: translateX(500em);
   -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
 }
 
-.portfolio-item:nth-child(even) .portfolio-item__links-item:first-child{
+.portfolio-item:nth-child(even) .portfolio-item__links-item:first-child {
   transform: translateX(-500em);
   -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
 }
 
-.portfolio-item:nth-child(even) .portfolio-item__links-item:last-child{
+.portfolio-item:nth-child(even) .portfolio-item__links-item:last-child {
   transform: translateX(-500em);
   --webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
 }
 
-.portfolio-item:nth-child(odd) .portfolio-item__links-item:last-child{
+.portfolio-item:nth-child(odd) .portfolio-item__links-item:last-child {
   transform: translateX(-500em);
   -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
@@ -201,7 +202,7 @@
 .portfolio-item:nth-child(odd):hover .portfolio-item__links-item:first-child,
 .portfolio-item:nth-child(even):hover .portfolio-item__links-item:first-child,
 .portfolio-item:nth-child(even):hover .portfolio-item__links-item:last-child,
-.portfolio-item:nth-child(odd):hover .portfolio-item__links-item:last-child{
+.portfolio-item:nth-child(odd):hover .portfolio-item__links-item:last-child {
   transform: translateX(0);
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
@@ -214,4 +215,36 @@
   margin: auto;
   height: 100%;
   width: 100%;
+}
+
+.portfolio-bottom {
+  align-items: center;
+  background: url(%=static=%assets/portfolio/portfolio-bottom-section.jpg) no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  order: 1;
+  padding: 2em 0;
+  position: relative;
+}
+
+.portfolio-bottom:before {
+  background-color: $green-bg-block-alpha;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.portfolio-bottom-wrapper {
+  color: $white-color;
+  padding: 0 2em;
+  z-index: 10;
 }

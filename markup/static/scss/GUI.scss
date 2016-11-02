@@ -18,6 +18,22 @@
   }
 }
 
+.btn-default{
+  background: transparent;
+}
+
+.btn-white {
+  border-color: $white-color;
+  color: $white-color;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+
+  &:hover{
+    border-color: darken($white-color, 20%);
+    color: darken($white-color, 20%);
+  }
+}
+
 
 /*
     Спрайты
