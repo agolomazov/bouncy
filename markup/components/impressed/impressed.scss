@@ -1,7 +1,10 @@
 .impressed {
+
   background: url(%=static=%assets/impressed/black-man-bg.jpg) no-repeat;
+  background-position: center bottom;
   -webkit-background-size: cover;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .impressed .wrapper {

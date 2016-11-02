@@ -1,6 +1,7 @@
 .header {
   background: url(%=static=%assets/header/header-bg.jpg) no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .navigation {
