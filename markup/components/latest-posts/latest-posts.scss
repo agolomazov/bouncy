@@ -54,6 +54,8 @@
 .latest-post__link {
   color: $title-block-light-gray-color;
   text-decoration: none;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .latest-post__info{
@@ -89,12 +91,15 @@
   color: $dark-gray-text-color;
   text-transform: capitalize;
   margin-bottom: 3.75em;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .latest-posts__read-more-link .latest-post__link:before{
   content: '+ ';
 }
 
+.latest-post__link:hover,
 .latest-posts__read-more-link .latest-post__link:hover,
 .latest-posts__read-more-link .latest-post__link:hover:before{
   color: darken($dark-gray-text-color, 20%);
