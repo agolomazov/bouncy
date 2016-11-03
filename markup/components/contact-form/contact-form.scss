@@ -12,13 +12,12 @@
 }
 
 .form-row.fill-all {
-  height: 10em;
-  width: 100%;
+  align-items: flex-start;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: baseline;
   margin-bottom: 2em;
+  width: 100%;
 }
 
 .form-row.fill-all .form-control {
@@ -46,6 +45,10 @@ button.contact-btn.form-element.input-submit.btn-pad {
   &:hover {
     background: darken($green-color, 10%);
   }
+}
+
+.text-area-row{
+  height: 10em;
 }
 
 @media all and (max-width: 45em) {
