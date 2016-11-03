@@ -1,11 +1,16 @@
 /* eslint-disable */
-var map;
 function initMap () {
-    map = new google.maps.Map (document.getElementById ('map'), {
-        center: {lat: 40.6700, lng: -73.9400},
-        zoom: 14,
-        scrollwheel: false,
-        disableDefaultUI: true,
+    // Basic options for a simple Google Map
+    // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+    var mapOptions = {
+        // How zoomed in you want the map to start at (always required)
+        zoom: 12,
+        
+        // The latitude and longitude to center the map (always required)
+        center: new google.maps.LatLng (60.0085633, 30.2569134), // Spb
+        
+        // How you would like to style the map.
+        // This is where you would paste any style found on Snazzy Maps.
         styles: [{
             "featureType": "water",
             "elementType": "geometry",
@@ -52,11 +57,74 @@ function initMap () {
             "featureType": "administrative",
             "elementType": "geometry.stroke",
             "stylers": [{"color": "#fefefe"}, {"lightness": 17}, {"weight": 1.2}]
-        }]
-    });
+        }],
+        draggable: true,
+        scrollwheel: false,
+        zoomControl: false,
+        tilt: 0,
+        panControl: false,
+        fullscreenControl: false,
+        scaleControl: false,
+        disableDoubleClickZoom: true,
+        streetViewControl: false,
+        signInControl: false,
+        rotateControl: false,
+        mapTypeControl: false
+    };
+    
+    // Get the HTML DOM element that will contain your map
+    // We are using a div with id="map" seen below in the <body>
+    var mapElement = document.getElementById ('map');
+    
+    // Create the Google Map using our element and options defined above
+    var map = new google.maps.Map (mapElement, mapOptions);
+    
+    // Let's also add a marker while we're at it
     var marker = new google.maps.Marker ({
-        position: new google.maps.LatLng (40.6700, -73.9400),
-        map: map
+        position: new google.maps.LatLng (60.0085633, 30.2569134),
+        map: map,
+        opacity: .6,
+        animation: google.maps.Animation.DROP
+    });
+    
+    
+    marker.addListener ('mouseover', function (e) {
+        marker.setOptions ({
+            opacity: 1.0
+        });
+    });
+    
+    marker.addListener ('mouseout', function (e) {
+        marker.setOptions ({
+            opacity: 0.6
+        });
+    });
+    
+    
+    map.addListener ('click', function (e) {
+        map.setOptions ({
+            scrollwheel: true,
+            zoomControl: true
+        });
+    });
+    
+    map.addListener ('drag', function (e) {
+        map.setOptions ({
+            scrollwheel: true,
+            zoomControl: true
+        });
+    });
+    
+    map.addListener ('mouseout', function (e) {
+        map.setOptions ({
+            scrollwheel: false,
+            zoomControl: false
+        });
+    });
+    
+    var getCenterMap = map.getCenter ();
+    google.maps.event.addDomListener (window, 'resize', function () {
+        map.setCenter (getCenterMap);
     });
 }
 /* eslint-enable */
