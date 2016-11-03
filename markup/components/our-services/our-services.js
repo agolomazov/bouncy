@@ -17,8 +17,8 @@ var servicesTabs = (() => {
         params.container = $(selector);
         params.tabClass = options.tabClass;
         params.activeClass = options.activeClass;
-        $('.our-services__tabs-link').on('click', function (event) {
-            event.preventDefault();
+        $('.our-services__tabs-link').on('click', function (e) {
+            e.preventDefault();
             switchTab($(this).data('target'));
         });
     };
