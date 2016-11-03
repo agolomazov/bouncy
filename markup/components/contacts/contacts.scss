@@ -1,0 +1,111 @@
+.contacts {
+  padding: 2em 0;
+}
+
+.contacts-list__wrapper {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  order: 1;
+}
+
+.contact-list__item {
+  background-color: $white-color;
+  border: 1px solid $box-shadow-color;
+  cursor: pointer;
+  margin: 0 1.25em 2em;
+  overflow: hidden;
+  width: 17.9375em;
+}
+
+.contact-list__item-header{
+  height: 9.0625em;
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+.contact-list__item-link{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.contact-list__item .contact-icon{
+  -webkit-animation: contactIcon  .5s ease-out 0s 1 normal forwards;
+  -moz-animation: contactIcon  .5s ease-out 0s 1 normal forwards;
+  -o-animation: contactIcon  .5s ease-out 0s 1 normal forwards;
+  animation: contactIcon  .5s ease-out 0s 1 normal forwards;
+}
+
+.contact-list__item:hover .contact-icon{
+  -webkit-animation: contactIconHover  .5s ease-in 0s 1 normal forwards;
+  -moz-animation: contactIconHover  .5s ease-in 0s 1 normal forwards;
+  -o-animation: contactIconHover  .5s ease-in 0s 1 normal forwards;
+  animation: contactIconHover  .5s ease-in 0s 1 normal forwards;
+}
+
+
+.email-contact{
+  background: url(%=static=%assets/contacts/contact-us__email-bg.jpg) no-repeat;
+}
+
+.map-contact{
+  background: url(%=static=%assets/contacts/contact-us__our-office-bg.jpg) no-repeat;
+}
+
+.phone-contact{
+  background: url(%=static=%assets/contacts/contact-us__phone-bg.jpg) no-repeat;
+}
+
+.contact-list__item-wrapper-content{
+  padding: 1em 1.5em;
+}
+
+.contact-list__item-title{
+  color: $dark-title-color;
+  font-size: 1em;
+  margin-bottom: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contact-list__item-content{
+  color: $text-block-gray-color;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.contact-list__item-unit{
+  display: block;
+}
+
+.contact-list__item-unit-link{
+  color: $text-block-gray-color;
+  text-decoration: none;
+
+  &:hover{
+    color: darken($text-block-gray-color, 20%);
+    text-decoration: underline;
+  }
+}
+
+@keyframes contactIcon {
+  from { transform: translateY(0); }
+  to { transform: translateY(-15em); }
+}
+
+@keyframes contactIconHover {
+  from { transform: translateY(-15em); }
+  to { transform: translateY(0); }
+}
+
+@media all and (max-width: 38em){
+  .contacts-list__wrapper{
+    align-items: center;
+    flex-direction: column;
+  }
+}

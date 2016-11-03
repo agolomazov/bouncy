@@ -1,0 +1,52 @@
+.black-loved{
+  background: url(%=static=%assets/black-loved/t-shirt-bg.jpg) no-repeat;
+  background-size: cover;
+  padding: 2em 0;
+}
+
+.black-loved:before{
+  background-color: rgba(0, 0, 0, .6);
+  content: '';
+  display: flex;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  opacity: 1;
+  width: 100%;
+  z-index: 5;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.black-loved:hover:before{
+  opacity: 0;
+}
+
+.black-loved .wrapper{
+  z-index: 20;
+  margin-bottom: 2em;
+}
+
+.black-loved-text{
+  font-size: 1.25em;
+  margin-bottom: 1.5em;
+}
+
+.black-loved-button__link{
+  border: 1px solid $white-color;
+  border-radius: 1.25em;
+  color: $white-color;
+  margin-bottom: 2em;
+  padding: .3125em .9375em;
+  text-decoration: none;
+  
+  -webkit-transition: all .25s;
+  transition: all .25s;
+
+  &:hover{
+    border: 1px solid darken($white-color, 20%);
+    color: darken($white-color, 20%);
+  }
+}
+
