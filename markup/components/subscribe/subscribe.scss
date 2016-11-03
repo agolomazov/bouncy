@@ -24,14 +24,16 @@
 
 .form-control{
   margin: 0 1em 1em;
+  max-width: 22.5em;
 }
 
 .input-text{
   background: transparent;
   border: 1px solid $text-block-gray-color;
   color: $text-block-gray-color;
-  min-width: 22.5em;
-  padding: .5em 1em;
+  padding: .5em 0;
+  text-indent: 1em;
+  width: 100%;
 }
 
 .input-text:focus{
@@ -57,6 +59,15 @@
 @media all and (max-width: 37.5em){
   .form-row{
     flex-direction: column;
+  }
+
+  .subscribe-form-block{
+    margin: 0 auto 1em;
+    width: 90%;
+  }
+
+  .subscribe-form-block__wrapper{
+    width: 100%;
   }
 
   .subscribe_btn{

@@ -43,6 +43,13 @@
     }
 }
 
+@media all and (max-width: 45em){
+    .bouncy-wrapper {
+        max-width: none;
+        width: 90%;
+    }
+}
+
 
 @media (max-width: 38em) {
     .bouncy-article {
@@ -58,7 +65,5 @@
     }
     .bouncy-picture {
         display: none;
-        // flex-direction: row;
-        // justify-content: center; 
     }
 }
