@@ -1,1 +1,65 @@
+.team {
+    color: $dark-gray-text-color;
+    display: flex;
+    flex-direction: column;
+}
+.team__header {
+    margin-bottom: 1.75em;
+}
+.team__title {
+    color: $dark-title-color;
+}
+.team__body {
+    display: flex;
+    justify-content: space-between;
+}
+.team-member__bio {
+    max-width: 40%;
+    text-align: right;
+    margin-right: 2em;
+}
+.team-member__header {
+    border-right: 4px solid $green-color;
+    padding-right: 2em;
+    margin-right: -2em;
+    text-align: right;
+    text-transform: uppercase;
+    
+}
 
+.team-member__title {
+    color: $dark-title-color;
+    margin-bottom: 0.25em;
+}
+.team-member__subtitle {
+    margin-top: 0;
+    font-style: italic;
+}
+.team-member__stats-wrapper {
+    padding-left: 4em;
+}
+.team-member__stats {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+.team-member__description {
+    margin-bottom: 2em;
+}
+.team-mebmer__stat-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0.25em;
+}
+.team-member__stats-bar {
+    width: 100%;
+    height: 0.3em;
+    background-color: $dark-gray-text-color;
+}
+.team-member__stats-line {
+    width: 0%;
+    height: 0.3em;
+    background-color: $green-color;
+}
