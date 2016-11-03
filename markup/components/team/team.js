@@ -1,16 +1,15 @@
 var progressBar = (function () {
-    var init = function (selector) {
-        let val = $(selector).data('value');
-        let bar = $(selector).find('.team-member__stats-line');
-        $(bar).animate({
-            width: val,
-        }, 500);
-    };
     return {
-        init
+        init: function (selector, speed) {
+            let val = $(selector).data('value');
+            let bar = $(selector).find('.team-member__stats-line');
+            $(bar).animate({
+                width: val,
+            }, speed);
+        }
     };
 })();
 // progressBar.init();
 $('.team-member__stats').each(function () {
-    progressBar.init(this);
+    progressBar.init(this, 3000);
 });
