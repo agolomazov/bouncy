@@ -133,6 +133,22 @@
   }
 }
 
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+  text-align: right;
+}
+
+.nav-toggle svg g{
+  fill: $white-color;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.nav-toggle:hover svg g{
+  fill: darken($white-color, 20%);
+}
+
 @keyframes btnToAbout {
   0% {
     top: 0;
@@ -174,5 +190,44 @@
 @media all and (max-width: 45em){
   .navigation{
     margin-bottom: 4em;
+  }
+
+  .logo{
+    position: relative;
+  }
+
+  .logo-link{
+    width: 90%;
+  }
+
+  .nav-menu{
+    display: none;
+  }
+
+  .nav-toggle{
+    position: absolute;
+    top: 5px;
+    display: block;
+    right: 15px;
+    width: 20px;
+  }
+
+  .menu{
+    background: rgba(57, 47, 46, .5);
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .menu__item{
+    margin: 0 0 .625em;
+  }
+
+  .menu__item:last-child{
+    margin-bottom: 0;
+  }
+
+  .menu__item-link.btn{
+    text-transform: uppercase;
+    border-radius: 0;
   }
 }

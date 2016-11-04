@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="30" viewBox="0 0 10 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b2b3b3;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #b2b3b3;
+        stroke-width: 1px;
+      }
+    </style>
+  </defs>
+  <circle id="Ellipse_7_copy" data-name="Ellipse 7 copy" class="cls-1" cx="5" cy="5" r="5"/>
+  <circle id="Ellipse_7_copy_2" data-name="Ellipse 7 copy 2" class="cls-2" cx="5" cy="25" r="5"/>
+</svg>

@@ -1,0 +1,137 @@
+.our-prices {
+  padding: 2em 0;
+}
+
+.prices-container{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  order: 1;
+}
+
+.price-item{
+  background-color: $white-color;
+  box-shadow: 0 0 .25em $box-shadow-color;
+  cursor: pointer;
+  margin: 0 1em 1em;
+  min-height: 18.75em;
+  overflow: hidden;
+  position: relative;
+  width: 15.625em;
+}
+
+.price-item__title-side, .price-item__back-side{
+  align-items: center;
+  background-color: $white-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.price-item__title{
+  background-color: $green-bg-block;
+  color: $white-color;
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: .625em;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 1;
+}
+
+.price-item__description{
+  margin: auto;
+  transform: translateY(-1em);
+}
+
+.price-item__value,
+.price-item__meta{
+  padding: 0 1em;
+  text-align: center;
+}
+
+.price-item__value{
+  font-weight: bold;
+  font-size: 2.625em;
+  margin-bottom: .25em;
+}
+
+.price-item__meta{
+  color: $text-block-gray-color;
+  font-size: 1.25em;
+}
+
+.price-item__back-side{
+  flex-direction: column;
+  height: 90%;
+  justify-content: space-between;
+  opacity: 0;
+  padding: 10% 0 0 0;
+  width: 100%;
+  z-index: 10;
+
+  transition: all linear .25s;
+  -webkit-transition: all linear .25s;
+}
+
+.list-offers{
+  list-style: none;
+  margin: 0 auto .625em;
+  padding: 0;
+  transform: translateY(-500em);
+  width: 70%;
+
+  transition: all linear .4s;
+  -webkit-transition: all linear .4s;
+}
+
+.list-offers__item{
+  color: $text-block-gray-color;
+  margin-bottom: .5em;
+  font-size: .875em;
+}
+
+.price-btn__wrapper{
+  box-sizing: content-box;
+  transform: translateY(.3125em);
+  width: 100%;
+}
+
+.btn-price{
+  background-color: $green-color;
+  color: $white-color;
+  display: block;
+  padding: 1em 0;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  transition: all linear .6s;
+  -webkit-transition: all linear .6s;
+  transform: translateX(500em);
+
+  
+  &:hover{
+    background-color: darken($green-color, 20%);
+  }
+}
+
+.price-item:hover .price-item__back-side{
+  opacity: 1;
+
+}
+
+.price-item:hover .list-offers{
+  transform: translateY(0);
+}
+
+.price-item:hover .btn-price{
+  transform: translateX(0);
+}

@@ -1,0 +1,129 @@
+.latest-posts {
+  background: url(%=static=%assets/latest-posts/latest-post-bg.jpg) no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 2em 0;
+}
+
+.latest-posts .section__title {
+  margin-bottom: 2.5em;
+}
+
+.latest-post__container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  order: 1;
+  width: 85%;
+}
+
+.latest-posts__list {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  margin: 0 auto 2em;
+  padding: 0;
+  width: 90%;
+}
+
+.latest-post__item{
+  margin-bottom: 2em;
+  margin-right: 2em;
+   width: 95%;
+}
+
+.latest-post__item:hover{
+  cursor: pointer;
+}
+
+.latest-post__item:focus{
+  outline: none;
+}
+
+.latest-posts .subtitle__text {
+  color: $dark-gray-text-color;
+}
+
+.latest-post__title-post {
+
+  font-size: 1.25em;
+}
+
+.latest-post__link {
+  color: $title-block-light-gray-color;
+  text-decoration: none;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.latest-post__info{
+  color: $text-block-gray-color;
+  font-style: italic;
+  text-transform: uppercase;
+  margin-bottom: .3125em;
+}
+
+.latest-post__author-post{
+  color: $green-color;
+  text-decoration: none;
+
+  &:hover{
+    color: darken($green-color, 20%);
+    text-decoration: underline;
+  }
+}
+
+.latest-post__meta{
+  color: $dark-title-name-color;
+  font-family: $sourceSansProLight;
+  font-size: .9em;
+  margin-bottom: 3.75em;
+}
+
+.latest-post__review{
+  color: $dark-subtitle-name-color;
+  margin-bottom: 3.75em;
+}
+
+.latest-posts__read-more-link .latest-post__link{
+  color: $dark-gray-text-color;
+  text-transform: capitalize;
+  margin-bottom: 3.75em;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.latest-posts__read-more-link .latest-post__link:before{
+  content: '+ ';
+}
+
+.latest-post__link:hover,
+.latest-posts__read-more-link .latest-post__link:hover,
+.latest-posts__read-more-link .latest-post__link:hover:before{
+  color: darken($dark-gray-text-color, 20%);
+}
+
+.latest-posts__dots{
+  list-style: none;
+}
+
+.latest-posts__dots button {
+  opacity: 0;
+}
+
+.latest-posts__dots li {
+  background: url(%=static=%minified-svg/dots-slider.svg) no-repeat;
+  background-position: 10px -10px;
+}
+
+.latest-posts__dots li.slick-active{
+  background-position: 10px 11px;
+}
+
+@media all and (max-width: 38.5em){
+  .latest-posts__list {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,121 @@
+.testimonials{
+  padding: 2em 0;
+}
+
+.testimonials__container{
+  background-color: $white-color;
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  padding: 2.5em 5em 0;
+}
+
+.testimonials__list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.testimonials__list-item.slick-slide{
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+.testimonials__list-item.slick-slide:hover{
+  cursor: pointer;
+}
+
+.testimonials__list-item.slick-slide:focus{
+  outline: none;
+}
+
+.testimonials__avatar{
+  margin-bottom: 2em;
+  margin-right: 2em;
+  order: 1;
+}
+
+.testimonials__avatar-img{
+  border-radius: 50%;
+  transform: translateY(1.5em);
+}
+
+.testimonial__content{
+  color: $text-block-gray-color;
+  font-size: 1em;
+  order: 1;
+}
+
+.testimonial-text{
+  margin-bottom: 2em;
+}
+
+.testimonial__author{
+  color: $green-color;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.testimonial__author-work{
+  color: $dark-title-name-color;
+  font-size: .875em;
+  text-transform: uppercase;
+}
+
+.testimonials__dots{
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.testimonials__dots li{
+  background: url(%=static=%minified-svg/green-dots.svg) no-repeat;
+  background-position: -30px 5px;
+}
+
+.testimonials__dots li.slick-active{
+  background-position: 10px 5px;
+}
+
+.testimonials__dots li button{
+  opacity: 0;
+}
+
+@media all and (max-width: 38em){
+  .testimonials__list-item{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 1em;
+  }
+
+  .testimonials__avatar {
+    display: flex;
+    margin-bottom: 2em;
+    margin-right: 2em;
+    order: 2;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .testimonials__avatar-img{
+    height: 4em;
+    text-align: right;
+    transform: translateY(-2em);
+    width: 4em;
+  }
+}
