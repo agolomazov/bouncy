@@ -22,7 +22,8 @@
 }
 .team-slider__item {
     cursor: pointer;
-    padding: 0 2em;
+    padding: 0 4em;
+    &:focus { outline: none; }
 }
 .team-slider__item.slick-slide {
     display: flex;
@@ -105,6 +106,12 @@
 
 .team-slider__dots li button{
   opacity: 0;
+}
+
+@media all and (max-width: 730px) {
+    .team-slider__item {
+        font-size: 0.9em;
+    }
 }
 
 @media all and (max-width: 650px) {
