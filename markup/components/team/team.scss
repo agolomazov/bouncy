@@ -13,6 +13,20 @@
     display: flex;
     justify-content: space-between;
 }
+.team-slider__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+.team-slider__item {
+    cursor: pointer;
+    padding: 0 2em;
+}
+.team-slider__item.slick-slide {
+    display: flex;
+}
 .team-member__bio {
     max-width: 40%;
     text-align: right;
@@ -34,6 +48,11 @@
 .team-member__subtitle {
     margin-top: 0;
     font-style: italic;
+}
+.team-member__person {
+    display: flex;
+    max-width: 18em;
+    max-height: 23em;
 }
 .team-member__stats-wrapper {
     padding-left: 4em;
@@ -62,4 +81,45 @@
     width: 0%;
     height: 0.3em;
     background-color: $green-color;
+}
+
+.team-slider__dots{
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.team-slider__dots li{
+  background: url(%=static=%minified-svg/green-dots.svg) no-repeat;
+  background-position: -30px 5px;
+}
+
+.team-slider__dots li.slick-active{
+  background-position: 10px 5px;
+}
+
+.team-slider__dots li button{
+  opacity: 0;
+}
+
+@media all and (max-width: 650px) {
+    .team-slider__item {
+        flex-direction: column;
+        margin-bottom: 2em;
+    }
+    .team-member__person {
+        align-self: center;
+    }
+    .team-member__bio {
+        max-width: 100%;
+        justify-content: space-around;
+    }
+    .team-member__stats-wrapper {
+        padding-left: 0;
+    }
 }
