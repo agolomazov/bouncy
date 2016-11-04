@@ -22,4 +22,8 @@ $('.sloga__title-text').typed({
     contentType: 'text',
     backDelay: 3000
 });
+
+new WOW().init({
+    offset: 0
+});
 /* eslint-enable */
