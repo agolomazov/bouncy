@@ -8,7 +8,15 @@
 
 .form-contact .form-row {
   justify-content: space-between;
+}
 
+.form-contact .form-row .form-control, .form-contact .form-row .form-control .input-text{
+  max-width: none;
+  width: 100%;
+}
+
+.form-contact .form-row .form-control{
+  margin: 0 0 1em;
 }
 
 .form-row.fill-all {
@@ -24,7 +32,7 @@
   display: flex;
   margin: 0 auto 1em;
   max-width: none;
-  width: 98%;
+  width: 100%;
 }
 
 .form-row.fill-all .form-control .contact-textarea {
@@ -49,24 +57,4 @@ button.contact-btn.form-element.input-submit.btn-pad {
 
 .text-area-row{
   height: 10em;
-}
-
-@media all and (max-width: 45em) {
-  .contact-form-block{
-    margin-right: 1em;
-  }
-  
-  .contact-form .form-row {
-    flex-direction: column;
-  }
-
-  .contact-form .form-row .form-control {
-    margin: 0 1em 1em;
-    max-width: none;
-    width: 100%;
-  }
-
-  .contact-form .form-row .form-control .input-text{
-    width: 100%;
-  }
 }

@@ -8,4 +8,22 @@ $(window).resize(function(){
         $('.nav-menu').removeAttr('style');
     }
 });
+
+$('.sloga__title-text').typed({
+    strings: [
+        'Hello, everyone!',
+        'We are code cafe',
+        'We the best code cafe in internet! ;)'
+    ],
+    startDelay: 500,
+    stringsElement: null,
+    showCursor: true,
+    typeSpeed: 50,
+    contentType: 'text',
+    backDelay: 3000
+});
+
+new WOW().init({
+    offset: 0
+});
 /* eslint-enable */
